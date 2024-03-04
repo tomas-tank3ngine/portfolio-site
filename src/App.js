@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Store from "./assets/utils/context-utils";
+import Header from "./assets/components/Header/Header";
+import Footer from "./assets/components/Footer/Footer";
+import Homepage from "./assets/pages/Homepage/Homepage";
 
 function App() {
   return (
@@ -7,7 +10,7 @@ function App() {
         <Store>
             <Header />
             <Routes>
-                {/* <Route path="/" element={}/> */}
+                <Route path="/" element={<Homepage />}/>
             </Routes>
             <Footer />
         </Store>
