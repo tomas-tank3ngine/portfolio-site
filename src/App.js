@@ -7,13 +7,13 @@ import Homepage from "./assets/pages/Homepage/Homepage";
 function App() {
   return (
     <BrowserRouter>
-        <Store>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Homepage />}/>
-            </Routes>
-            <Footer />
-        </Store>
+      <Store>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+        <Footer />
+      </Store>
     </BrowserRouter>
   );
 }

@@ -1,8 +1,5 @@
-import "./Footer.scss"
+import "./Footer.scss";
 
-export default function Footer (){
-    return(
-        <>
-        </>
-    )
+export default function Footer() {
+  return <></>;
 }

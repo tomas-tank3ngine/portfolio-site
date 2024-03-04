@@ -1,9 +1,5 @@
-import "./Homepage.scss"
+import "./Homepage.scss";
 
-export default function Homepage(){
-    return(
-        <>
-        Hello
-        </>
-    )
+export default function Homepage() {
+  return <>Hello</>;
 }
