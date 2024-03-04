@@ -14,7 +14,7 @@
 
 @mixin tablet-only{
     @media (min-width: 768px) and (max-width: 1279px){
-        @content;        
+        @content;
     }
 }
 
@@ -28,7 +28,7 @@
     * {
         box-sizing: border-box;
     }
-      
+
     body {
         margin: 0;
         padding: 0;
@@ -36,32 +36,32 @@
         &::-webkit-scrollbar {
             display: none;
         }
-    
+
         /* Hide scrollbar for IE, Edge and Firefox */
         & {
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
     }
-    
+
     a {
         color: unset;
         text-decoration: unset;
         padding: 0;
         margin: 0;
     }
-    
+
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
     }
-    
+
     img {
         display: block;
         width: 100%;
     }
-    
+
     p, h1, h2, h3, h4, h5, h6, li {
         margin: 0;
         padding: 0;
@@ -83,6 +83,11 @@
 
     fieldset{
         border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    menu {
         margin: 0;
         padding: 0;
     }
