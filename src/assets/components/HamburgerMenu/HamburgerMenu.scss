@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.menu{
+
+    @include tablet{
+        display: none;
+    }
+
+    &__button{
+
+        &--icon{
+
+        }
+    }
+
+    &__nav{
+
+        &--link{
+
+        }
+    }
+}
