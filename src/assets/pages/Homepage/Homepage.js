@@ -5,6 +5,14 @@ import Icons from "../../components/IconHolder/IconHolder";
 
 export default function Homepage() {
 
+    const handleEmailAddress = async () => {
+        try {
+            await navigator.clipboard.writeText("tomasmartinez1424@gmail.com");
+            alert(" Email copied to clipboard!");
+        } catch (error) {
+            console.error("Error copying to clipboard: ", error);
+        }
+    };
   return (
     <main className="main">
       <section className="about">
@@ -25,15 +33,15 @@ export default function Homepage() {
             comes to creating compelling, high quality digital experiences.
             </p>
             <nav className="about-container__socials">
-                <Link className="social">
+                <Link to="https://github.com/tomas-tank3ngine" target="_blank" className="social">
                     <img src={Icons().GithubIcon} alt="Github Icon" className="social__image" />
                 </Link>
-                <Link className="social">
+                <Link to="https://www.linkedin.com/in/tomasemartinez/" className="social" target="_blank">
                     <img src={Icons().LinkedInIcon} alt="Github Icon" className="social__image" />
                 </Link>
-                <Link className="social">
+                <button onClick={handleEmailAddress} className="social" target="_blank">
                     <img src={Icons().MailIcon} alt="Github Icon" className="social__image" />
-                </Link>
+                </button>
             </nav>
         </div>
       </section>
