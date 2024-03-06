@@ -3,25 +3,32 @@ import portrait from "../../images/Tomas Portrait.png";
 import { Link } from "react-router-dom";
 
 export default function Homepage() {
+
   return (
     <main className="main">
       <section className="about">
-        <div className="about__headshot">
-          <img
-            src={portrait}
-            alt="portrait"
-            className="about__headshot--image"
-          />
+
+        <img src={portrait} alt="portrait" className="about__headshot" />
+
+        <div className="about-container">
+            <h2 className="about-container__header">
+            <span className="about-container__header--line">Hi there 👋 I'm Tomas </span>
+            <span className="about-container__header--line">
+                A Full-Stack Software Developer
+            </span>
+            </h2>
+            <p className="about-container__bio">
+            I'm also a self-taught programmer, bootcamp grad, entrepreneur, and
+            former escape room designer. I've always been someone who enjoys
+            finding creative solutions to complex problems especially when it
+            comes to creating compelling, high quality experiences.
+            </p>
+            <nav className="about-container__socials">
+                <Link className="social">Github</Link>
+                <Link className="social">Github</Link>
+                <Link className="social">Github</Link>
+            </nav>
         </div>
-        <h2 className="about__header">
-          Hi there 👋 I'm Tomas, A Full-Stack Software Developer
-        </h2>
-        <p className="about__bio">
-          I'm also a self-taught programmer, bootcamp grad, entrepreneur, and
-          former escape room designer. I've always been someone who enjoys
-          finding creative solutions to complex problems especially when it
-          comes to creating compelling, high quality experiences.
-        </p>
       </section>
       <section className="pitch">
         <h2 className="pitch__header">I love working with Small Businesses</h2>
@@ -68,13 +75,14 @@ export default function Homepage() {
       </section>
       <section className="recent-work">
         <h2 className="recent-work__header">My Recent Work</h2>
-        <p className="recent-work__tagline">Here are a few past designs I've worked on. Want more info? Email me</p>
+        <p className="recent-work__tagline">
+          Here are a few past designs I've worked on. Want more info? Email me
+        </p>
         <ul className="recent-work__list">
-            <li className="site">
-                <Link className="site__link">
+          <li onClick ="" className="item">
+            <h3 className="item__header">testing</h3>
+          </li>
 
-                </Link>
-            </li>
         </ul>
       </section>
     </main>
