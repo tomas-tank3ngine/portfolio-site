@@ -1,6 +1,7 @@
 import "./Homepage.scss";
 import portrait from "../../images/Tomas Portrait.png";
 import { Link } from "react-router-dom";
+import Icons from "../../components/IconHolder/IconHolder";
 
 export default function Homepage() {
 
@@ -21,12 +22,18 @@ export default function Homepage() {
             I'm also a self-taught programmer, bootcamp grad, entrepreneur, and
             former escape room designer. I've always been someone who enjoys
             finding creative solutions to complex problems especially when it
-            comes to creating compelling, high quality experiences.
+            comes to creating compelling, high quality digital experiences.
             </p>
             <nav className="about-container__socials">
-                <Link className="social">Github</Link>
-                <Link className="social">Github</Link>
-                <Link className="social">Github</Link>
+                <Link className="social">
+                    <img src={Icons().GithubIcon} alt="Github Icon" className="social__image" />
+                </Link>
+                <Link className="social">
+                    <img src={Icons().LinkedInIcon} alt="Github Icon" className="social__image" />
+                </Link>
+                <Link className="social">
+                    <img src={Icons().MailIcon} alt="Github Icon" className="social__image" />
+                </Link>
             </nav>
         </div>
       </section>

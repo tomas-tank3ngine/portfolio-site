@@ -42,6 +42,7 @@
             justify-content: center;
             flex-direction: column;
             height: 100%;
+            gap: 8px;
 
             @include tablet{
 
@@ -52,7 +53,7 @@
                 flex-direction: column;
                 @extend .section-header;
                 text-align: center;
-                margin: 8px;
+                // margin: 8px;
 
                 &--line{
 
@@ -66,9 +67,15 @@
                 }
             }
             &__socials{
-
+                display: flex;
+                justify-content: center;
+                width: 100%;
                 .social{
-
+                    height: 100%;
+                    width: 30%;
+                    &__image{
+                        height: 48px;
+                    }
                 }
             }
         }
