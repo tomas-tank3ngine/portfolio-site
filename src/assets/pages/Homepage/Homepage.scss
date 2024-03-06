@@ -4,18 +4,23 @@
 
 .main{
     @extend .format-padding;
+    display: flex;
+    flex-direction: column;
 
     .about{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin: 20px 0;
-        gap: 16px;
+
+        height: max-content;
 
         @include tablet{
             flex-direction: row;
             min-height: 250px;
-            justify-content: center;
+            gap: 5%;
+            // justify-content: space-around;
         }
         &__headshot{
             display: flex;
@@ -25,6 +30,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 8px 0;
+            object-position: 50% 25%;
 
             @include tablet{
                 // width: 400px;
@@ -33,7 +39,10 @@
                 border-radius: 20px;
                 background-color: #B7CA78;
                 object-fit: cover;
-                flex-grow: 1;
+                object-position: 50% 50%;
+                width: 50%;
+                max-width: 300px;
+                // flex-grow: 1;
             }
         }
 
@@ -42,39 +51,57 @@
             justify-content: center;
             flex-direction: column;
             height: 100%;
-            gap: 8px;
+
 
             @include tablet{
+                width: 75%;
+                max-width: 350px;
+                gap: 16px;
+            }
 
+            @include desktop{
+                gap: 20px;
             }
 
             &__header{
                 display: flex;
                 flex-direction: column;
-                @extend .section-header;
+                @extend .page-header;
                 text-align: center;
                 // margin: 8px;
 
                 &--line{
+                    margin: 8px 0;
+                    &.line-1{
 
+                    }
+                    &.line-2{
+                        @extend .section-header;
+                    }
                 }
             }
             &__bio{
                 @extend .body-copy;
                 text-align: justify;
+                margin-bottom: 8px;
                 @include tablet{
 
                 }
             }
             &__socials{
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 width: 100%;
+                flex-grow: 2;
                 .social{
                     height: 100%;
-                    width: 30%;
+                    // width: 30%;
                     &__image{
                         height: 48px;
+
+                        @include tablet{
+                            height: 75px;
+                        }
                     }
                 }
             }
@@ -88,7 +115,8 @@
         margin: 20px 0;
 
         @include tablet{
-            width: 50%;
+            // width: 50%;
+            // padding: 0 11vw;
         }
         &__header{
             display: flex;
@@ -105,13 +133,20 @@
 
     .card{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         border: 1px black solid;
         border-radius: 20px;
         padding: 16px;
+        flex-wrap: wrap;
+        @include tablet{
+            max-width: 460px;
+            align-self: center;
+            margin: 20px 0;
+        }
         &__header{
             display: flex;
             flex-direction: column;
+            width: 100%;
             @extend .section-header;
             text-align: center;
             margin: 8px 0;
@@ -119,6 +154,7 @@
         &__description{
             @extend .body-copy;
             text-align: center;
+            width: 100%;
         }
 
         .card-info{
@@ -127,6 +163,10 @@
             align-items: center;
             width: 100%;
             margin-top: 16px;
+            @include tablet{
+                width: 50%;
+            }
+
             &__header{
                 @extend .subheader;
             }
@@ -158,16 +198,24 @@
         }
         &__list{
             display: flex;
-            flex-direction: column;
             width: 100%;
             margin: 16px 0;
+            flex-wrap: wrap;
+            @include tablet{
+                flex-direction: row;
+                // padding: 8px;
+                justify-content: center;
+            }
             .item{
                 width: 100%;
                 background-color: slategray;
                 height: 180px;
                 border-radius: 25px;
                 padding: 16px;
-                margin: 8px 0;
+                margin: 8px 8px;
+                @include tablet{
+                    width: 45%;
+                }
                 &__header{
                     width: 100%;
                 }

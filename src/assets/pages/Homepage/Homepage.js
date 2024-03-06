@@ -21,8 +21,8 @@ export default function Homepage() {
 
         <div className="about-container">
             <h2 className="about-container__header">
-            <span className="about-container__header--line">Hi there 👋 I'm Tomas </span>
-            <span className="about-container__header--line">
+            <span className="about-container__header--line line-1">Hi there 👋 I'm Tomas </span>
+            <span className="about-container__header--line line-2">
                 A Full-Stack Software Developer
             </span>
             </h2>
@@ -97,6 +97,10 @@ export default function Homepage() {
           <li onClick ="" className="item">
             <h3 className="item__header">testing</h3>
           </li>
+          <li onClick ="" className="item">
+            <h3 className="item__header">testing</h3>
+          </li>
+
 
         </ul>
       </section>
