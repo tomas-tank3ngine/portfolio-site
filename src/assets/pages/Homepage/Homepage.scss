@@ -1,3 +1,228 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
+
+.main{
+    @extend .format-padding;
+    display: flex;
+    flex-direction: column;
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+
+        height: max-content;
+
+        @include tablet{
+            flex-direction: row;
+            min-height: 250px;
+            gap: 5%;
+            // justify-content: space-around;
+        }
+        &__headshot{
+            display: flex;
+            min-width: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 8px 0;
+            object-position: 50% 25%;
+
+            @include tablet{
+                // width: 400px;
+                // width: 50%;
+                height: 360px;
+                border-radius: 20px;
+                background-color: #B7CA78;
+                object-fit: cover;
+                object-position: 50% 50%;
+                width: 50%;
+                max-width: 300px;
+                // flex-grow: 1;
+            }
+        }
+
+        .about-container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+
+
+            @include tablet{
+                width: 75%;
+                max-width: 350px;
+                gap: 16px;
+            }
+
+            @include desktop{
+                gap: 20px;
+            }
+
+            &__header{
+                display: flex;
+                flex-direction: column;
+                @extend .page-header;
+                text-align: center;
+                // margin: 8px;
+
+                &--line{
+                    margin: 8px 0;
+                    &.line-1{
+
+                    }
+                    &.line-2{
+                        @extend .section-header;
+                    }
+                }
+            }
+            &__bio{
+                @extend .body-copy;
+                text-align: justify;
+                margin-bottom: 8px;
+                @include tablet{
+
+                }
+            }
+            &__socials{
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                flex-grow: 2;
+                .social{
+                    height: 100%;
+                    // width: 30%;
+                    &__image{
+                        height: 48px;
+
+                        @include tablet{
+                            height: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pitch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+
+        @include tablet{
+            // width: 50%;
+            // padding: 0 11vw;
+        }
+        &__header{
+            display: flex;
+            flex-direction: column;
+            @extend .section-header;
+            text-align: center;
+            margin: 8px 0;
+        }
+        &__bio{
+            @extend .body-copy;
+            text-align: justify;
+        }
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        border: 1px black solid;
+        border-radius: 20px;
+        padding: 16px;
+        flex-wrap: wrap;
+        @include tablet{
+            max-width: 460px;
+            align-self: center;
+            margin: 20px 0;
+        }
+        &__header{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @extend .section-header;
+            text-align: center;
+            margin: 8px 0;
+        }
+        &__description{
+            @extend .body-copy;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 16px;
+            @include tablet{
+                width: 50%;
+            }
+
+            &__header{
+                @extend .subheader;
+            }
+            .info-list{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 75%;
+                &__item{
+                    margin: 8px 12px;
+                }
+            }
+        }
+    }
+    .recent-work{
+        width: 100%;
+        margin: 16px 0;
+        &__header{
+            display: flex;
+            flex-direction: column;
+            @extend .section-header;
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        &__tagline{
+            @extend .body-copy;
+            text-align: center;
+        }
+        &__list{
+            display: flex;
+            width: 100%;
+            margin: 16px 0;
+            flex-wrap: wrap;
+            @include tablet{
+                flex-direction: row;
+                // padding: 8px;
+                justify-content: center;
+            }
+            .item{
+                width: 100%;
+                background-color: slategray;
+                height: 180px;
+                border-radius: 25px;
+                padding: 16px;
+                margin: 8px 8px;
+                @include tablet{
+                    width: 45%;
+                    height: auto;
+                    // height: 330px;
+                    aspect-ratio: 16 / 9;
+                }
+                &__header{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
