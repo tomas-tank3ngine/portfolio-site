@@ -3,11 +3,11 @@ import Icons from "../IconHolder/IconHolder";
 import { useState } from "react";
 
 export default function HamburgerMenu() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleMenu = () => {
-      setIsOpen(!isOpen);
-    };
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <menu className="menu">
@@ -27,13 +27,13 @@ export default function HamburgerMenu() {
           </ul>
         </>
       ) : (
-          <button className="menu-button" onClick={handleMenu}>
-            <img
-              src={Icons().MenuIcon}
-              alt="hamburger menu"
-              className="menu-button__icon"
-            />
-          </button>
+        <button className="menu-button" onClick={handleMenu}>
+          <img
+            src={Icons().MenuIcon}
+            alt="hamburger menu"
+            className="menu-button__icon"
+          />
+        </button>
       )}
     </menu>
   );

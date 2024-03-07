@@ -2,23 +2,18 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-.menu{
+.menu {
+  @include tablet {
+    display: none;
+  }
 
-    @include tablet{
-        display: none;
+  &__button {
+    &--icon {
     }
+  }
 
-    &__button{
-
-        &--icon{
-
-        }
+  &__nav {
+    &--link {
     }
-
-    &__nav{
-
-        &--link{
-
-        }
-    }
+  }
 }
