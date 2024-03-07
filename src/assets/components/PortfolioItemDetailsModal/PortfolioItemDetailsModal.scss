@@ -75,6 +75,11 @@
                 text-align: center;
                 @extend .body-copy;
             }
+            &__break{
+                width: 85%;
+                border: 1px solid white;
+                border-radius: 20px;
+            }
             &__description{
                 text-align: justify;
                 @extend .body-copy;
