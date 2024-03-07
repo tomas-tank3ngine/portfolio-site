@@ -2,6 +2,8 @@ import "./Homepage.scss";
 import portrait from "../../images/Tomas Portrait.png";
 import { Link } from "react-router-dom";
 import Icons from "../../components/IconHolder/IconHolder";
+import { portfolioItems } from "../../utils/portfolio-items-utils";
+import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
 
 export default function Homepage() {
 
@@ -94,14 +96,11 @@ export default function Homepage() {
           Here are a few past designs I've worked on. Want more info? Email me
         </p>
         <ul className="recent-work__list">
-          <li onClick ="" className="item">
-            <h3 className="item__header">testing</h3>
-          </li>
-          <li onClick ="" className="item">
-            <h3 className="item__header">testing</h3>
-          </li>
-
-
+            {
+                portfolioItems.map((item) => {
+                    return <PortfolioItem key={item.id} item={item} />
+                })
+            }
         </ul>
       </section>
     </main>
