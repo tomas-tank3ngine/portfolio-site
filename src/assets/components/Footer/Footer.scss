@@ -1,3 +1,48 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
+
+.footer{
+    @extend .format-padding;
+    background-color: black;
+    color: $color-text-light;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    gap: 16px;
+
+    &__title{
+        @extend .section-header;
+        text-align: center;
+    }
+
+    &__link-holder{
+        display: flex;
+
+        .footer__links-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 8px;
+
+            &--icon{
+                width: 32px;
+                color: $color-text-light;
+                @include tablet{
+                    width: 64px;
+                }
+            }
+            &--text{
+            color: $color-text-light;
+            @extend .label;
+            font-weight: bold;
+            letter-spacing: 0.2ch;
+            }
+        }
+    }
+    &__copyright{
+        text-align: center;
+    }
+}
