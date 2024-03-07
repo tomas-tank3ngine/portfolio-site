@@ -1,25 +1,26 @@
 import "./PortfolioItem.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PortfolioItemDetailsModal from "../PortfolioItemDetailsModal/PortfolioItemDetailsModal";
 
-export default function PortfolioItem({item}) {
-    const [modalActive, setModalActive] = useState(false);
-    // console.log(item)
-    // const [test, setTest] = useState({})
+export default function PortfolioItem({ item }) {
+  const [modalActive, setModalActive] = useState(false);
 
-    // useEffect(()=>{
-    //     setTest(item)
-    // },[item])
-
-    const handleClick = ()=>{
-        setModalActive(true);
-    }
+  const handleModal = () => {
+    setModalActive(!modalActive);
+  };
 
   return (
     <>
-        {modalActive && <itemDetailsModal />}
-        <li onClick={handleClick} className="item">
-            {item.thumbnail && <img src={require(`../../images/${item.thumbnail}`)} alt="item thumbnail" className="item__thumbnail" />}
-        </li>
+      {modalActive && <PortfolioItemDetailsModal item={item} handleModal={handleModal}/>}
+      <li onClick={handleModal} className="item">
+        {item.thumbnail && (
+          <img
+            src={require(`../../images/${item.thumbnail}`)}
+            alt="item thumbnail"
+            className="item__thumbnail"
+          />
+        )}
+      </li>
     </>
   );
 }
