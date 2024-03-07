@@ -2,18 +2,97 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-.menu {
-  @include tablet {
-    display: none;
-  }
-
-  &__button {
-    &--icon {
+.menu-background{
+    @include tablet{
+        display: none;
     }
-  }
+    position: fixed;
+    top: 0;
+    right: 0px;
+    z-index: 1;
+    height: 200px;
+    width: 200px;
+    background-color: slategray;
+    transition: all 0.15s linear;
 
-  &__nav {
-    &--link {
+    &.open{
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
+        top: -200px;
+        right: -200px;
     }
-  }
+
+    &.closed{
+        height: 0;
+        width: 0;
+    }
+}
+
+
+
+.open-menu{
+    @include tablet{
+        display: none;
+    }
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__button{
+        align-self: flex-end;
+        &--icon{
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        gap: 16px;
+
+
+        &--link {
+            align-self: flex-end;
+            @extend .label;
+            font-weight: bold;
+            letter-spacing: 0.2ch;
+        }
+    }
+}
+.close-menu{
+    @include tablet{
+        display: none;
+    }
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: slategray;
+    border-radius: 50%;
+    padding: 8px;
+
+    &__button{
+
+        &--icon{
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    &__nav{
+
+        &--link{
+
+        }
+    }
 }

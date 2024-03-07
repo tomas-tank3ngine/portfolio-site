@@ -16,7 +16,7 @@ export default function Homepage() {
   };
   return (
     <main className="main">
-      <section className="about">
+      <section className="about" id="about">
         <img src={portrait} alt="portrait" className="about__headshot" />
 
         <div className="about-container">
@@ -114,7 +114,7 @@ export default function Homepage() {
           </ul>
         </section>
       </section>
-      <section className="recent-work">
+      <section className="recent-work" id="recent-work">
         <h2 className="recent-work__header">My Recent Work</h2>
         <p className="recent-work__tagline">
           Here are a few past designs I've worked on. Want more info? Email me
