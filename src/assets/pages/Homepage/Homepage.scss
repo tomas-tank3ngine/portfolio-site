@@ -201,28 +201,7 @@
             width: 100%;
             margin: 16px 0;
             flex-wrap: wrap;
-            @include tablet{
-                flex-direction: row;
-                // padding: 8px;
-                justify-content: center;
-            }
-            .item{
-                width: 100%;
-                background-color: slategray;
-                height: 180px;
-                border-radius: 25px;
-                padding: 16px;
-                margin: 8px 8px;
-                @include tablet{
-                    width: 45%;
-                    height: auto;
-                    // height: 330px;
-                    aspect-ratio: 16 / 9;
-                }
-                &__header{
-                    width: 100%;
-                }
-            }
+            justify-content: center;
         }
     }
 }

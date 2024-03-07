@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+.item{
+    position: relative;
+    // width: 100%;
+    background-color: slategray;
+    height: 180px;
+    min-height: 180px;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    @include tablet{
+        width: calc(50% - 32px)
+    }
+    &__thumbnail{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+        // background-position: center;
+    }
+    &__header{
+        width: 100%;
+    }
+}

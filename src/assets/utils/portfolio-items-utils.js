@@ -1,13 +1,16 @@
 export const portfolioItems = [
     {
         id: 1,
-        site_name: "test",
+        site_name: "Rate Escaoe",
         description: "test",
         tech_stack: "test",
-        image: "testurl",
+        thumbnail: "RateEscapeThumbnail.png",
         site_link: "test",
     },
     {
 
     },
+    {
+
+    }
 ]
