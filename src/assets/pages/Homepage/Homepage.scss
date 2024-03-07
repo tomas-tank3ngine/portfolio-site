@@ -215,6 +215,9 @@
                 margin: 8px 8px;
                 @include tablet{
                     width: 45%;
+                    height: auto;
+                    // height: 330px;
+                    aspect-ratio: 16 / 9;
                 }
                 &__header{
                     width: 100%;

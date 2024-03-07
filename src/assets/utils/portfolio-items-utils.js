@@ -6,7 +6,6 @@ export const portfolioItems = [
         tech_stack: "test",
         image: "testurl",
         site_link: "test",
-
     },
     {
 
