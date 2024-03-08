@@ -69,13 +69,15 @@ body {
   font-size: 16px;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.1ch;
 
   @include tablet {
     font-size: 22px;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 0.1ch;
   }
 }
 

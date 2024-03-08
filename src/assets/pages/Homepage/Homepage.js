@@ -16,6 +16,10 @@ export default function Homepage() {
   };
   return (
     <main className="main">
+        <div className="page-background">
+            <div className="page-background__layer-1"></div>
+            <div className="page-background__layer-2"></div>
+        </div>
       <section className="about" id="about">
         <img src={portrait} alt="portrait" className="about__headshot" />
 
