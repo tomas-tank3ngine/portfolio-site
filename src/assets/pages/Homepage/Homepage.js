@@ -39,7 +39,7 @@ export default function Homepage({ handleEmailAddress }) {
             >
               <img
                 src={Icons().GithubIcon}
-                alt="Github Icon"
+                alt="Github"
                 className="social__image"
               />
               <p className="social__text">Github</p>
@@ -51,7 +51,7 @@ export default function Homepage({ handleEmailAddress }) {
             >
               <img
                 src={Icons().LinkedInIcon}
-                alt="Github Icon"
+                alt="Linkedin"
                 className="social__image"
               />
               <p className="social__text">LinkedIn</p>
@@ -62,7 +62,7 @@ export default function Homepage({ handleEmailAddress }) {
             >
               <img
                 src={Icons().MailIcon}
-                alt="Github Icon"
+                alt="Email"
                 className="social__image"
               />
               <p className="social__text">Email</p>
@@ -95,7 +95,7 @@ export default function Homepage({ handleEmailAddress }) {
         </div>
         <img
           src={Business}
-          alt="small business image"
+          alt="small business"
           className="pitch__image"
         />
       </section>
