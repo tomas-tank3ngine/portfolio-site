@@ -4,22 +4,25 @@
 
 .header {
   display: none;
-  background: rgb(0, 0, 0);
+  z-index: 1;
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8) 10%,
-    rgba(255, 255, 255, 0) 100%
+    rgb(255, 255, 255) 20%,
+    rgba(255, 255, 255, 0.5) 75%,
+    rgba(255, 255, 255, 0.0) 100%
   );
 
   @include tablet {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     display: flex;
     flex-direction: row;
-    min-height: 48px;
+    min-height: 56px;
   }
   @include desktop {
-    min-height: 48px;
+    min-height: 64px;
   }
 
   &__nav {
@@ -29,8 +32,9 @@
     @extend .format-padding;
     &--link {
       display: flex;
-      align-items: center;
+    //   align-items: center;
       padding: 0 5%;
+      padding-top: 20px;
       @extend .label;
       font-weight: bold;
       font-size: 18px;

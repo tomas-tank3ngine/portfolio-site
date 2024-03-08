@@ -6,6 +6,7 @@ export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenu = () => {
+
     setIsOpen(!isOpen);
   };
 

@@ -8,9 +8,9 @@ export default function Header() {
 
       <header className="header">
         <ul className="header__nav">
-          <li className="header__nav--link">About</li>
-          <li className="header__nav--link">Portfolio</li>
-          <li className="header__nav--link">Contact</li>
+          <li className="header__nav--link"><a href="#about">About</a></li>
+          <li className="header__nav--link"><a href="#recent-work">Recent Work</a></li>
+          <li className="header__nav--link"><a href="#footer">Contact</a></li>
         </ul>
       </header>
     </>
