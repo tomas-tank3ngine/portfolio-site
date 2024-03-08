@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+.item {
+  position: relative;
+  background-color: slategray;
+  box-shadow: 0 0 0.75rem 0.0625rem rgba(0, 0, 0, 0.3);
+  height: auto;
+  min-height: 11.25rem;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  transition: all 0.1s linear;
+  @include tablet {
+    width: calc(50% - 2rem);
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(105%);
+  }
+  &__thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__header {
+    width: 100%;
+  }
+}
