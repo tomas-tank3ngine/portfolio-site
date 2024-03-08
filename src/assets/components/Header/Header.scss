@@ -5,17 +5,15 @@
 .header {
   display: none;
   z-index: 1;
-//   background: rgba(0, 0, 0, 0.1);
-//   background: linear-gradient(
-//     180deg,
-//     rgba(white, 0.6) 30%,
-//     rgba(white, 0.4) 60%,
-//     rgba(white, 0.0) 100%
-//   );
+  //   background: rgba(0, 0, 0, 0.1);
+  //   background: linear-gradient(
+  //     180deg,
+  //     rgba(white, 0.6) 30%,
+  //     rgba(white, 0.4) 60%,
+  //     rgba(white, 0.0) 100%
+  //   );
 
-//     backdrop-filter: blur(4px);
-
-
+  //     backdrop-filter: blur(4px);
 
   @include tablet {
     position: fixed;
@@ -30,7 +28,7 @@
     padding-top: 8px;
   }
 
-  &__background{
+  &__background {
     z-index: 2;
     position: absolute;
     top: 0;
@@ -38,12 +36,12 @@
     height: 120%;
     width: 100%;
     background-color: rgba(white, 0.95);
-    -webkit-mask-image: linear-gradient(to bottom,black 10%,transparent 80%);
-    mask-image: linear-gradient(to bottom,black 10%,transparent 80%);
+    -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 80%);
+    mask-image: linear-gradient(to bottom, black 10%, transparent 80%);
     backdrop-filter: blur(20px);
 
-    @include desktop{
-        height: 200%;
+    @include desktop {
+      height: 200%;
     }
   }
 

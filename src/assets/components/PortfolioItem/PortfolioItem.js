@@ -11,7 +11,9 @@ export default function PortfolioItem({ item }) {
 
   return (
     <>
-      {modalActive && <PortfolioItemDetailsModal item={item} handleModal={handleModal}/>}
+      {modalActive && (
+        <PortfolioItemDetailsModal item={item} handleModal={handleModal} />
+      )}
       <li onClick={handleModal} className="item">
         {item.thumbnail && (
           <img

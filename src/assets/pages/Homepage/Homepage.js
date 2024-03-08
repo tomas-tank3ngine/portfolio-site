@@ -16,10 +16,10 @@ export default function Homepage() {
   };
   return (
     <main className="main">
-        <div className="page-background">
-            <div className="page-background__layer-1"></div>
-            <div className="page-background__layer-2"></div>
-        </div>
+      <div className="page-background">
+        <div className="page-background__layer-1"></div>
+        <div className="page-background__layer-2"></div>
+      </div>
       <section className="about" id="about">
         <img src={portrait} alt="portrait" className="about__headshot" />
 
@@ -49,6 +49,7 @@ export default function Homepage() {
                 alt="Github Icon"
                 className="social__image"
               />
+              <p className="social__text">Github</p>
             </Link>
             <Link
               to="https://www.linkedin.com/in/tomasemartinez/"
@@ -60,6 +61,7 @@ export default function Homepage() {
                 alt="Github Icon"
                 className="social__image"
               />
+              <p className="social__text">LinkedIn</p>
             </Link>
             <button
               onClick={handleEmailAddress}
@@ -71,6 +73,7 @@ export default function Homepage() {
                 alt="Github Icon"
                 className="social__image"
               />
+              <p className="social__text">Email</p>
             </button>
           </nav>
         </div>
@@ -124,10 +127,10 @@ export default function Homepage() {
           Here are a few past designs I've worked on. Want more info? Email me
         </p>
         <ul className="recent-work__list">
-          {portfolioItems && portfolioItems
-          .map((item) =>
-            <PortfolioItem key={item.id} item={item} />
-          )}
+          {portfolioItems &&
+            portfolioItems.map((item) => (
+              <PortfolioItem key={item.id} item={item} />
+            ))}
         </ul>
       </section>
     </main>

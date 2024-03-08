@@ -6,13 +6,12 @@ export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenu = () => {
-
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <div className={`menu-background ${isOpen ? 'open': 'closed'}`}></div>
+      <div className={`menu-background ${isOpen ? "open" : "closed"}`}></div>
       {isOpen ? (
         <menu className={`open-menu`}>
           <button className="open-menu__button" onClick={handleMenu}>
@@ -26,7 +25,9 @@ export default function HamburgerMenu() {
             <li className="open-menu__nav--link">
               <a href="#about">About</a>
             </li>
-            <li className={`open-menu__nav--link ${isOpen ? 'open': 'closed'}`}>
+            <li
+              className={`open-menu__nav--link ${isOpen ? "open" : "closed"}`}
+            >
               <a href="#recent-work">Recent Work</a>
             </li>
             <li className="open-menu__nav--link">
