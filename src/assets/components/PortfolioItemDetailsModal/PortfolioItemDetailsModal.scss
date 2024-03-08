@@ -51,6 +51,7 @@
         background-color: $color-error;
         border-radius: 50%;
         outline: 1px solid black;
+        font-size: 24px;
         font-weight: bolder;
         box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.3);
 
@@ -60,7 +61,7 @@
             height: 48px;
             top: -16px;
             right: -16px;
-            font-size: 24px;
+            font-size: 36px;
         }
     }
     &__image{
