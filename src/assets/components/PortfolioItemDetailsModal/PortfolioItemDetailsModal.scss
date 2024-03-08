@@ -9,104 +9,148 @@
     width: 100%;
     height: 100%;
     background-color: rgba($color-dark-shade, 0.8);
-    backdrop-filter: blur(1px);
+    // backdrop-filter: blur(1px);
     z-index: 100;
 
-    .modal{
-        background-color: $color-dark-accent;
-        position: sticky;
-        // top: 50vh;
-        // left: 50%;\
-        // top: 0;
-        top: 0;
-        left: 0;
-        transform: translate(5%, 33%);
+}
+.modal{
+    z-index: 150;
+    background-color: $color-dark-accent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 90%;
+    height: auto;
+    min-height: 300px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.6);
+
+    @include tablet{
+        padding: 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 600px;
+    }
+    @include desktop{
+        max-width: 950px;
+        height: 50%;
+    }
+    // overflow: hidden;
+    &__exit{
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 36px;
+        height: 36px;
+        background-color: $color-error;
+        border-radius: 50%;
+        outline: 1px solid black;
+        font-weight: bolder;
+        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.3);
+
+
+        @include tablet{
+            width: 48px;
+            height: 48px;
+            top: -16px;
+            right: -16px;
+            font-size: 24px;
+        }
+    }
+    &__image{
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.3);
+
+
+        @include desktop{
+            width: calc(60% - 16px)
+        }
+    }
+    .site-details{
+        color: white;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        width: 90%;
-        height: auto;
-        min-height: 300px;
-        padding: 16px;
-        border-radius: 12px;
-        @include tablet{
-            padding: 24px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            max-width: 600px;
-            transform: translate(14%, 14%);
+        gap: 8px;
+        text-shadow: 0px 0px 20px black;
+
+        @include tablet-only{
+            padding: 0 15%;
         }
         @include desktop{
-            max-width: 950px;
+            width: calc(40% - 16px);
+            gap: 24px;
         }
-        // overflow: hidden;
-        &__exit{
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            width: 24px;
-            height: 24px;
-            background-color: $color-error;
-            border-radius: 50%;
-            outline: 1px solid black;
+
+        &__client-name{
+            @extend .page-header;
+            align-self: center;
         }
-        &__image{
+        &__tech-stack{
+            text-align: center;
+            @extend .body-copy;
+        }
+        &__break{
+            width: 85%;
+            border: 1px solid white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.8);
+
+        }
+        &__description{
+            text-align: justify;
+            @extend .body-copy;
+        }
+    }
+    &__buttons{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+
+
+
+        &--site{
+            background-color: $color-light-primary;
             border-radius: 8px;
-            @include desktop{
-                width: calc(60% - 16px)
-                // aspect-ratio: 16 / 9;
-                // height: auto;
-            }
-        }
-        .site-details{
-            color: white;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-
-            @include tablet-only{
-                padding: 0 15%;
-            }
-            @include desktop{
-                width: calc(40% - 16px);
-                gap: 24px;
-            }
-
-            &__client-name{
-                @extend .page-header;
-                align-self: center;
-            }
-            &__tech-stack{
-                text-align: center;
-                @extend .body-copy;
-            }
-            &__break{
-                width: 85%;
-                border: 1px solid white;
-                border-radius: 20px;
-            }
-            &__description{
-                text-align: justify;
-                @extend .body-copy;
-            }
-        }
-
-        &__site-link{
-            background-color: red;
-            border-radius: 8px;
-            width: 100%;
+            width: 45%;
             height: auto;
             padding: 8px;
             text-align: center;
             font-weight: bold;
             letter-spacing: 0.25ch;
-            @extend .label;
-            @include desktop{
+            box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.6);
 
+            @extend .label;
+
+            @include desktop {
+                width: 65%;
+            }
+        }
+        &--repo{
+            background-color: $color-light-accent;
+            border-radius: 8px;
+            width: 45%;
+            height: auto;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 0.25ch;
+            box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.6);
+            @extend .label;
+
+            @include desktop {
+                flex-grow: 1;
             }
         }
     }
+
 }
 
 

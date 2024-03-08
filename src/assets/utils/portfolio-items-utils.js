@@ -7,6 +7,7 @@ export const portfolioItems = [
     thumbnail: "RateEscapeThumbnail.png",
     site_screenshot: "RateEscapeScreenshot.png",
     site_link: "https://rate-escape.netlify.app/",
+    repo_link: "https://github.com/tomas-tank3ngine/rate-escape-room",
   },
   {
     id: 2,
@@ -16,5 +17,6 @@ export const portfolioItems = [
     thumbnail: "2048Thumbnail.png",
     site_screenshot: "2048Screenshot.png",
     site_link: "https://play2048clone.netlify.app/",
+    repo_link: "https://github.com/tomas-tank3ngine/2048-clone",
   },
 ];
