@@ -3,24 +3,28 @@
 @use "../../styles/partials/global" as *;
 .item {
   position: relative;
-  // width: 100%;
   background-color: slategray;
-  height: 180px;
-  min-height: 180px;
-  border-radius: 12px;
-  padding: 16px;
-  margin: 8px 8px;
+  box-shadow: 0 0 0.75rem 0.0625rem rgba(0, 0, 0, 0.3);
+  height: auto;
+  min-height: 11.25rem;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem;
   overflow: hidden;
   aspect-ratio: 16 / 9;
+  transition: all 0.1s linear;
   @include tablet {
-    width: calc(50% - 32px);
+    width: calc(50% - 2rem);
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(105%);
   }
   &__thumbnail {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // background-position: center;
   }
   &__header {
     width: 100%;

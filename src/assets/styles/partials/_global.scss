@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 @include blank-slate-styling;
+@include popup-notification;
 
 @font-face {
   font-family: "Avenir";
@@ -33,7 +34,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 14px;
 }
 
 /* Track */
@@ -52,29 +53,43 @@ body {
 }
 
 .page-header {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 
   @include tablet {
-    font-size: 33px;
+    font-size: 2.0625rem;
     line-height: 2.75rem;
+    font-family: "Avenir", Arial, sans-serif;
+    font-weight: 700;
+  }
+  @include desktop {
+    font-size: 2.0625rem;
+    line-height: 3rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 700;
   }
 }
 
 .section-header {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 0.1ch;
 
   @include tablet {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.25rem;
+    font-family: "Avenir", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1ch;
+  }
+
+  @include desktop {
+    font-size: 1.625rem;
+    line-height: 1.75rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 0.1ch;
@@ -82,41 +97,53 @@ body {
 }
 
 .subheader {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 
   @include tablet {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 700;
   }
+  @include desktop {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-family: "Avenir", Arial, sans-serif;
+    font-weight: 600;
+  }
 }
 
 .body-copy {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 400;
 
   @include tablet {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375rem;
+    font-family: "Avenir", Arial, sans-serif;
+    font-weight: 400;
+  }
+  @include desktop {
+    font-size: 1.25rem;
+    line-height: 1.7rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 400;
   }
 }
 
 .label {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 500;
 
   @include tablet {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 500;
@@ -170,12 +197,11 @@ body {
   padding: 0 1rem;
 
   @include tablet {
-    // padding: 0 2.25rem;
     padding: 0 10vw;
   }
 
   @include desktop {
-    padding: 0 26vw;
+    padding: 0 16vw;
   }
 }
 
