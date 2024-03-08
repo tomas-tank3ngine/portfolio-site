@@ -3,7 +3,7 @@
 @use "../../styles/partials/global" as *;
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,7 +37,7 @@
   }
   @include desktop {
     max-width: 59.375rem;
-    height: 50%;
+    height: auto
   }
   &__exit {
     position: absolute;
