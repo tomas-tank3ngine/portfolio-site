@@ -7,56 +7,51 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 36px;
+  gap: 2.25rem;
   flex-wrap: wrap;
-  &>*{
+  & > * {
     width: 100%;
   }
-  //   background-color: $color-light-shade;
 
   .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 20px 0;
+    margin: 1.25rem 0 1.25rem 0;
     width: 100%;
 
     height: max-content;
 
     @include tablet {
       flex-direction: row;
-      min-height: 250px;
-      margin-top: 48px;
+      min-height: 15.625rem;
+      margin-top: 3rem;
       gap: 5%;
-      // justify-content: space-around;
     }
 
     @include desktop {
-      margin-top: 80px;
+      margin-top: 5rem;
     }
     &__headshot {
       display: flex;
-      min-width: 200px;
-      width: 200px;
-      height: 200px;
+      min-width: 12.5rem;
+      width: 12.5rem;
+      height: 12.5rem;
       border-radius: 50%;
       object-fit: cover;
-      margin: 8px 0;
+      margin: 0.5rem 0;
       object-position: 50% 25%;
-      box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 0.75rem 0.0625rem rgba(0, 0, 0, 0.3);
 
       @include tablet {
-        // width: 400px;
-        // width: 50%;
-        height: 360px;
-        border-radius: 20px;
+        height: 22.5rem;
+        border-radius: 1.25rem;
         background-color: #b7ca78;
         object-fit: cover;
         object-position: 50% 50%;
         width: 50%;
-        max-width: 300px;
-        // flex-grow: 1;
+        max-width: 18.75rem;
       }
     }
 
@@ -68,11 +63,11 @@
 
       @include tablet {
         width: 75%;
-        gap: 16px;
+        gap: 1rem;
       }
 
       @include desktop {
-        gap: 20px;
+        gap: 1.25rem;
       }
 
       &__header {
@@ -80,10 +75,9 @@
         flex-direction: column;
         @extend .page-header;
         text-align: center;
-        // margin: 8px;
 
         &--line {
-          margin: 8px 0;
+          margin: 0.5rem 0;
           &.line-1 {
           }
           &.line-2 {
@@ -94,11 +88,12 @@
       &__bio {
         @extend .body-copy;
         text-align: justify;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
         @include tablet {
         }
       }
       &__socials {
+        position: relative;
         display: flex;
         justify-content: space-evenly;
         width: 100%;
@@ -110,30 +105,28 @@
           align-items: center;
           position: relative;
 
-            &:hover {
-              cursor: pointer;
+          &:hover {
+            cursor: pointer;
 
-              & >.social__text{
-                transform: translateY(25px);
-                color: $color-text-light;
-                text-shadow: 0px 0px 20px black;
-              }
-              & >.social__image{
-                transform: scale(105%);
-              }
-
+            & > .social__text {
+              transform: translateY(1.5625rem);
+              color: $color-text-dark;
+              text-shadow: 0 0 0.625rem rgba(white, 0.8);
             }
+            & > .social__image {
+              transform: scale(105%);
+            }
+          }
 
           &__image {
-            height: 48px;
+            height: 3rem;
             transition: all 0.1s linear;
 
             @include tablet {
-              height: 75px;
+              height: 4.6875rem;
             }
-
           }
-          &__text{
+          &__text {
             @extend .label;
             font-weight: 600;
             letter-spacing: 0.2ch;
@@ -142,8 +135,13 @@
 
             color: rgba(0, 0, 0, 0);
 
-            transition: transform 0.2s ease-in-out, color .15s linear;
+            transition:
+              transform 0.2s ease-in-out,
+              color 0.15s linear;
+          }
 
+          &__notification {
+            position: absolute;
           }
         }
       }
@@ -157,60 +155,57 @@
     color: $color-text-dark;
     width: 100%;
 
-    @include desktop{
-        flex-direction: row;
+    @include desktop {
+      flex-direction: row;
     }
 
-    &__text-container{
-
-        @include desktop{
-            width: 50%;
-        }
-        &--header {
-          display: flex;
-          flex-direction: column;
-          @extend .section-header;
-          text-align: center;
-          margin: 8px 0;
-          font-weight: 600;
-          letter-spacing: 0.1ch;
-        }
-        &--bio {
-          @extend .body-copy;
-          text-align: justify;
-        }
+    &__text-container {
+      @include desktop {
+        width: 50%;
+      }
+      &--header {
+        display: flex;
+        flex-direction: column;
+        @extend .section-header;
+        text-align: center;
+        margin: 0.5rem 0;
+        font-weight: 600;
+        letter-spacing: 0.1ch;
+      }
+      &--bio {
+        @extend .body-copy;
+        text-align: justify;
+      }
     }
 
-    &__image{
-        width: 75%;
-        align-self: center;
+    &__image {
+      width: 75%;
+      align-self: center;
 
-        @include desktop{
-            width: 50%;
-        }
+      @include desktop {
+        width: 50%;
+      }
     }
   }
 
   .card {
     display: flex;
     flex-direction: row;
-    border: 1px black solid;
-    border-radius: 20px;
-    padding: 16px;
+    border: 0.0625rem black solid;
+    border-radius: 1.25rem;
+    padding: 1rem;
     flex-wrap: wrap;
-    backdrop-filter: blur(1px);
     background-color: rgba($color-light-primary, 0.9);
-    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-
+    box-shadow: 0 0 0.75rem 0.0625rem rgba(0, 0, 0, 0.3);
 
     @include tablet {
-      max-width: 460px;
+      max-width: 28.75rem;
       align-self: center;
     }
 
-    @include desktop{
-       max-width: unset;
-       min-height: 360px;
+    @include desktop {
+      max-width: 56.25rem;
+      min-height: 22.5rem;
     }
 
     &__header {
@@ -219,7 +214,7 @@
       width: 100%;
       @extend .section-header;
       text-align: center;
-      margin: 8px 0;
+      margin: 0.5rem 0;
     }
     &__description {
       @extend .body-copy;
@@ -231,8 +226,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       width: 100%;
-      margin-top: 16px;
+      margin-top: 1rem;
       @include tablet {
         width: 50%;
       }
@@ -246,7 +242,7 @@
         flex-wrap: wrap;
         width: 75%;
         &__item {
-          margin: 8px 12px;
+          margin: 0.5rem 0.75rem;
         }
       }
     }
@@ -254,25 +250,37 @@
   .recent-work {
     width: 100%;
     color: $color-text-light;
-    text-shadow: 0px 0px 20px black;
+    text-shadow: 0 0 1.25rem black;
+    position: relative;
 
-    // margin: 16px 0;
     &__header {
       display: flex;
       flex-direction: column;
       @extend .section-header;
       text-align: center;
-      padding: 8px 0;
+      padding: 0.5rem 0;
     }
 
     &__tagline {
       @extend .body-copy;
       text-align: center;
+      position: relative;
+      &--link {
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    &__notification {
+      position: absolute;
+      top: 0;
     }
     &__list {
       display: flex;
       width: 100%;
-      margin: 16px 0;
+      margin: 1rem 0;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -296,78 +304,94 @@
     z-index: -8;
     background-color: $color-dark-accent;
     clip-path: polygon(
-100% 100%,
-0% 100%,
-0% 39.44%,
-2% 39.45%,
-4% 39.48%,
-6% 39.53%,
-8% 39.6%,
-10% 39.69%,
-12% 39.8%,
-14% 39.92%,
-16% 40.06%,
-18% 40.22%,
-20% 40.4%,
-22% 40.59%,
-24% 40.8%,
-26% 41.02%,
-28% 41.26%,
-30% 41.51%,
-32% 41.77%,
-34% 42.04%,
-36% 42.32%,
-38% 42.6%,
-40% 42.9%,
-42% 43.2%,
-44% 43.51%,
-46% 43.82%,
-48% 44.13%,
-50% 44.44%,
-52% 44.76%,
-54% 45.07%,
-56% 45.38%,
-58% 45.69%,
-60% 45.99%,
-62% 46.29%,
-64% 46.57%,
-66% 46.85%,
-68% 47.12%,
-70% 47.38%,
-72% 47.63%,
-74% 47.87%,
-76% 48.09%,
-78% 48.3%,
-80% 48.49%,
-82% 48.67%,
-84% 48.83%,
-86% 48.97%,
-88% 49.09%,
-90% 49.2%,
-92% 49.29%,
-94% 49.36%,
-96% 49.41%,
-98% 49.43%,
-100% 49.44%
+      100% 100%,
+      0% 100%,
+      0% 39.44%,
+      2% 39.45%,
+      4% 39.48%,
+      6% 39.53%,
+      8% 39.6%,
+      10% 39.69%,
+      12% 39.8%,
+      14% 39.92%,
+      16% 40.06%,
+      18% 40.22%,
+      20% 40.4%,
+      22% 40.59%,
+      24% 40.8%,
+      26% 41.02%,
+      28% 41.26%,
+      30% 41.51%,
+      32% 41.77%,
+      34% 42.04%,
+      36% 42.32%,
+      38% 42.6%,
+      40% 42.9%,
+      42% 43.2%,
+      44% 43.51%,
+      46% 43.82%,
+      48% 44.13%,
+      50% 44.44%,
+      52% 44.76%,
+      54% 45.07%,
+      56% 45.38%,
+      58% 45.69%,
+      60% 45.99%,
+      62% 46.29%,
+      64% 46.57%,
+      66% 46.85%,
+      68% 47.12%,
+      70% 47.38%,
+      72% 47.63%,
+      74% 47.87%,
+      76% 48.09%,
+      78% 48.3%,
+      80% 48.49%,
+      82% 48.67%,
+      84% 48.83%,
+      86% 48.97%,
+      88% 49.09%,
+      90% 49.2%,
+      92% 49.29%,
+      94% 49.36%,
+      96% 49.41%,
+      98% 49.43%,
+      100% 49.44%
     );
   }
 }
 
 .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 5s;        /* Change to speed up or slow down */
-    animation-iteration-count: infinite;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-    display: inline-block;
-  }
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
 
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     5% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-     10% { transform: rotate(-8.0deg) }
-     15% { transform: rotate(14.0deg) }
-     20% { transform: rotate(-4.0deg) }
-     25% { transform: rotate(10.0deg) }
-     30% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
   }
+  5% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  10% {
+    transform: rotate(-8deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-4deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -2,16 +2,7 @@ import "./Footer.scss";
 import Icons from "../IconHolder/IconHolder";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
-  const handleEmailAddress = async () => {
-    try {
-      await navigator.clipboard.writeText("tomasmartinez1424@gmail.com");
-      alert(" Email copied to clipboard!");
-    } catch (error) {
-      console.error("Error copying to clipboard: ", error);
-    }
-  };
-
+export default function Footer({ handleEmailAddress }) {
   return (
     <footer className="footer" id="footer">
       <h1 className="footer__title">Contact</h1>
@@ -41,7 +32,7 @@ export default function Footer() {
           <p className="footer__links-container--text">LinkedIn</p>
         </Link>
         <button
-          onClick={handleEmailAddress}
+          onClick={() => handleEmailAddress("footerPopup")}
           className="footer__links-container"
           target="_blank"
         >
@@ -51,9 +42,22 @@ export default function Footer() {
             className="footer__links-container--icon"
           />
           <p className="footer__links-container--text">Email</p>
+          <div className="footer__links-container--notification popup">
+            <p className="popuptext" id="footerPopup">
+              Copied to clipboard
+            </p>
+          </div>
         </button>
       </section>
-      <p className="footer__copyright">©TomasMartinez2024</p>
+      <p className="footer__copyright">
+        ©TomasMartinez2024 |{" "}
+        <Link
+          to="https://github.com/tomas-tank3ngine/portfolio-site"
+          className="footer__copyright--link"
+        >
+          View this site on Github
+        </Link>
+      </p>
     </footer>
   );
 }
