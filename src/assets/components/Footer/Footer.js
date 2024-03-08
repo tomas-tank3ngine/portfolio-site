@@ -14,7 +14,7 @@ export default function Footer() {
       };
 
     return(
-    <footer className="footer">
+    <footer className="footer" id="footer">
         <h1 className="footer__title">Contact</h1>
         <section className="footer__link-holder">
 

@@ -12,13 +12,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 0 20px 0;
 
     height: max-content;
 
     @include tablet {
       flex-direction: row;
       min-height: 250px;
+      margin-top: 48px;
       gap: 5%;
       // justify-content: space-around;
     }
