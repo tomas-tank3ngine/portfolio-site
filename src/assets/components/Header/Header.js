@@ -12,6 +12,7 @@ export default function Header() {
           <li className="header__nav--link"><a href="#recent-work">Recent Work</a></li>
           <li className="header__nav--link"><a href="#footer">Contact</a></li>
         </ul>
+        <div className="header__background"></div>
       </header>
     </>
   );
