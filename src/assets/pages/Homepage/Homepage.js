@@ -75,10 +75,65 @@ export default function Homepage({ handleEmailAddress }) {
           </nav>
         </div>
       </section>
+
+      <section className="skills">
+        <h2 className="skills__header">Full-Stack Web Development</h2>
+        <p className="skills__description">
+          I like to code things from scratch and learning new ways to bring
+          ideas to life in the browser. Be it a frontend application with fun
+          animations, styles, and colours (like this website!) or a full-stack
+          application with a handmade database, my wide range of skills is sure
+          to meet your needs.
+        </p>
+        <section className="skills-info">
+          <h3 className="skills-info__header">Skilled in...</h3>
+          <ul className="info-list">
+            <li className="info-list__item">React</li>
+            <li className="info-list__item">NextJS</li>
+            <li className="info-list__item">TypeScript</li>
+            <li className="info-list__item">JavaScript</li>
+            <li className="info-list__item">Sass</li>
+            <li className="info-list__item">HTML</li>
+            <li className="info-list__item">CSS</li>
+            <li className="info-list__item">MySQL</li>
+            <li className="info-list__item">NodeJS</li>
+            <li className="info-list__item">C#</li>
+          </ul>
+        </section>
+        <section className="skills-info">
+          <h3 className="skills-info__header">Building with...</h3>
+          <ul className="info-list">
+            <li className="info-list__item">Axios</li>
+            <li className="info-list__item">Express</li>
+            <li className="info-list__item">Jest</li>
+            <li className="info-list__item">Github</li>
+            <li className="info-list__item">JWT</li>
+            <li className="info-list__item">VSCode</li>
+            <li className="info-list__item">Heroku</li>
+            <li className="info-list__item">Netlify</li>
+            <li className="info-list__item">Unity</li>
+
+          </ul>
+        </section>
+      </section>
+      <section className="recent-work" id="recent-work">
+        <h2 className="recent-work__header">My Recent Work</h2>
+
+        <p className="recent-work__tagline">
+          Here are a few past designs I've worked on:
+        </p>
+
+        <ul className="recent-work__list">
+          {portfolioItems &&
+            portfolioItems.map((item) => (
+              <PortfolioItem key={item.id} item={item} />
+            ))}
+        </ul>
+      </section>
       <section className="pitch">
         <div className="pitch__text-container">
           <h2 className="pitch__text-container--header">
-            I love working with Small Businesses
+            Let's Work Together!
           </h2>
           <p className="pitch__text-container--bio">
             I specialize in creating engaging websites and interactive
@@ -98,55 +153,6 @@ export default function Homepage({ handleEmailAddress }) {
           alt="small business"
           className="pitch__image"
         />
-      </section>
-
-      <section className="card">
-        <h2 className="card__header">Full-Stack Web Development</h2>
-        <p className="card__description">
-          I like to code things from scratch and learning new ways to bring
-          ideas to life in the browser. Be it a frontend application with fun
-          animations, styles, and colours (like this website!) or a full-stack
-          application with a handmade database, my wide range of skills is sure
-          to meet your needs.
-        </p>
-        <section className="card-info">
-          <h3 className="card-info__header">Languages</h3>
-          <ul className="info-list">
-            <li className="info-list__item">HTML</li>
-            <li className="info-list__item">CSS</li>
-            <li className="info-list__item">JavaScript</li>
-            <li className="info-list__item">React</li>
-            <li className="info-list__item">Sass</li>
-            <li className="info-list__item">Git</li>
-            <li className="info-list__item">SQL</li>
-            <li className="info-list__item">TypeScript</li>
-            <li className="info-list__item">Node.js</li>
-            <li className="info-list__item">Jest</li>
-          </ul>
-        </section>
-        <section className="card-info">
-          <h3 className="card-info__header">Dev Tools</h3>
-          <ul className="info-list">
-            <li className="info-list__item">VSCode</li>
-            <li className="info-list__item">Heroku</li>
-            <li className="info-list__item">Netlify</li>
-            <li className="info-list__item">Github</li>
-          </ul>
-        </section>
-      </section>
-      <section className="recent-work" id="recent-work">
-        <h2 className="recent-work__header">My Recent Work</h2>
-
-        <p className="recent-work__tagline">
-          Here are a few past designs I've worked on:
-        </p>
-
-        <ul className="recent-work__list">
-          {portfolioItems &&
-            portfolioItems.map((item) => (
-              <PortfolioItem key={item.id} item={item} />
-            ))}
-        </ul>
       </section>
     </main>
   );
