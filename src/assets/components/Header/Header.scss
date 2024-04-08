@@ -24,15 +24,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 120%;
+    height: 100%;
     width: 100%;
-    background-color: rgba(white, 0.95);
-    -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 80%);
-    mask-image: linear-gradient(to bottom, black 10%, transparent 80%);
+    background-color: rgba($color-light-primary, 0.95);
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, rgba(white, 0.7) 80%);
+    mask-image: linear-gradient(to bottom, black 20%, rgba(white, 0.80) 80%);
     backdrop-filter: blur(1.25rem);
+    border-bottom: 2px solid $color-light-primary;
+
 
     @include desktop {
-      height: 200%;
+      height: 100%;
     }
   }
 

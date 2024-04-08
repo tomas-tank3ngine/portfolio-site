@@ -32,4 +32,15 @@ export const portfolioItems = [
     site_link: "https://rc-cruise-personality-quiz.netlify.app/",
     repo_link: "https://github.com/tomas-tank3ngine/royal-caribbean-industry-project",
   },
+  {
+    id: 4,
+    site_name: "Child Appetite",
+    description:
+      "A website for an upcoming artist had an issue with large file image optimization. My solution was to implement image hosting via an S3 bucket connected to a CloudFront CDN. The result is a decrease in page loading time, increased accessibility, and better SEO.",
+    tech_stack: "Next.js | TypeScript | Tailwind | AWS",
+    thumbnail: "ChildAppetiteThumbnail.png",
+    site_screenshot: "ChildAppetiteScreenshot.png",
+    site_link: "https://www.childappetite.com/",
+    repo_link: "https://github.com/sean35mm/childappetite",
+  },
 ];
