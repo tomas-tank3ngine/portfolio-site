@@ -89,14 +89,15 @@ export default function Homepage({ handleEmailAddress }) {
           <h3 className="skills-info__header">Skilled in...</h3>
           <ul className="info-list">
             <li className="info-list__item">React</li>
-            <li className="info-list__item">NextJS</li>
+            <li className="info-list__item">Next.js</li>
             <li className="info-list__item">TypeScript</li>
             <li className="info-list__item">JavaScript</li>
             <li className="info-list__item">Sass</li>
+            <li className="info-list__item">Tailwind</li>
             <li className="info-list__item">HTML</li>
             <li className="info-list__item">CSS</li>
             <li className="info-list__item">MySQL</li>
-            <li className="info-list__item">NodeJS</li>
+            <li className="info-list__item">Node.js</li>
             <li className="info-list__item">C#</li>
           </ul>
         </section>
